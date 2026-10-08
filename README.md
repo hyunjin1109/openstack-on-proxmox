@@ -4,7 +4,9 @@ Proxmox + OpenStack IaaS environment built on CSAP security requirements
 ## 목적
 
 클라우드 보안인증 IaaS 통제항목 학습한 뒤 문서상의 요건이
-실제 인프라에서 어떻게 구현되는지 확인하기 위해 진행한 프로젝트이다.
+실제 인프라에서 어떻게 구현되는지 확인하기 위해 진행한 프로젝트의 기록이다.
+
+실행 가능한 코드가 아니라 구축 과정의 작업 로그와 트러블슈팅 문서를 담는다.
 
 1. **IaaS 구조 이해**
    하이퍼바이저(KVM)부터 클라우드 관리 계층(OpenStack)까지
