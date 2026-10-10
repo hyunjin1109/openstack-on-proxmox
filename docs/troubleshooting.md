@@ -1,8 +1,12 @@
-| # | 문제 | 원인 요약 |
-|---|------|----------|
-| 1 | dnf 저장소 접속 실패 | CentOS 8 EOL로 저장소 폐쇄 |
-| 2 | ISO 업로드 실패 | Proxmox local 저장소 91% |
-| 3 | Packstack Glance 설치 실패 | (확인 중) |
+| # | 문제 | 원인 요약 | 해결 | 
+|---|----------|----------|----------|
+| 1 | dnf 저장소 접속 실패 | CentOS 8 EOL로 저장소 폐쇄 | Rocky 9 + Dalmatian으로 재구축
+| 2 | ISO 업로드 실패 | Proxmox local 저장소 91% | 새 디스크 추가
+| 3 | Packstack Glance 설치 실패 | 의존 패키지가 있는 CRB 저장소가 기본 비활성화 | crb 저장소 활성화
+| 4 | 메모리 부족 | 올인원 OpenStack에 비해 VM 메모리가 너무 작음 | 8gb로 증설
+| 5 | IP가 .202와 .201 혼재 | VM이 DHCP(자동 할당)라 재연결 시 공유기가 다른 IP를 준 것으로 보임 | IP를 .102로 아예 고정, answer.txt도 .102로 재실행
+| 6 | Nova DB 동기화 실패 | 설정 파일(answer.txt)은 .201로 바뀌었는데 DB(nova_api.cell_mappings)에 저장된 셀 주소는 .202 그대로 | cell_mappings 102로 직접 수정 | 
+| 7 | compute 설치 실패 | Packstack이 ssh-keyscan 출력의 # 안내 줄까지 SSH 키로 저장 | nova_300.py 275번 줄에 # 줄 필터 추가
 
 
 
