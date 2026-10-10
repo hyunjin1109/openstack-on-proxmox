@@ -207,3 +207,12 @@ openstack network agent list
 # VM 돌릴 하이퍼바이저. 하나 보이고 State가 up이면 정상
 openstack hypervisor list
 ```
+
+
+### Openstack 접속 username, password 확인 명령어(vm에서 실행)
+
+```
+grep -E "OS_USERNAME|OS_PASSWORD" ~/keystonerc_admin
+```
+<img width="475" height="506" alt="image" src="https://github.com/user-attachments/assets/cdd1a3f4-15c3-4fc2-adcc-d20a376efa8b" />
+
