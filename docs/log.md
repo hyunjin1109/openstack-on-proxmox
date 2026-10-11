@@ -216,3 +216,15 @@ grep -E "OS_USERNAME|OS_PASSWORD" ~/keystonerc_admin
 ```
 <img width="475" height="506" alt="image" src="https://github.com/user-attachments/assets/cdd1a3f4-15c3-4fc2-adcc-d20a376efa8b" />
 
+
+
+## 2026-10-11
+openstack의 각 서비스별로 vm 나눠서 진행하기로 했다.
+나누는 이유는 다음과 같다.
+1. 장애 영향 범위 최소화
+2. 서비스별 용량 관리 
+3. 접근통제 세분화
+4. 감사 추적 용이
+
+CSAP 보안 요건에 따라 모니터링과 관리를 용이하게 하기 위해 분리하기로 결정함. 
+외부, DMZ를 Zone A, 내부와 관리용을 Zone B로 두기로 했다.
